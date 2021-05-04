@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: ieopetclinic
+  name: ieopetclinic
+  namespace: pt-ieopetclinic 
+spec:
+  host: ieopetclinic-pt-ieopetclinic.apps.ocp-t1.itw.uspto.gov
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: ieopetclinic
+    weight: 100
+status:
+  ingress:
+  - conditions:
+    - status: "True"
+      type: Admitted
+

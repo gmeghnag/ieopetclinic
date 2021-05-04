@@ -1,0 +1,57 @@
+apiVersion: v1
+imagePullSecrets:
+- name: ieopetclinic-dockercfg-95vgk
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2021-04-21T17:53:53Z"
+  labels:
+    app.kubernetes.io/instance: ieopetclinic
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ieopetclinic
+    app.kubernetes.io/version: latest
+    helm.sh/chart: ieopetclinic-4.0.0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:helm.sh/chart: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2021-04-21T17:53:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:secrets:
+        .: {}
+        k:{"name":"ieopetclinic-token-bwn96"}:
+          .: {}
+          f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-04-21T17:53:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        k:{"name":"ieopetclinic-dockercfg-95vgk"}:
+          .: {}
+          f:name: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2021-04-21T17:53:53Z"
+  name: ieopetclinic
+  namespace: pt-ieopetclinic
+  resourceVersion: "11060589"
+  selfLink: /api/v1/namespaces/pt-ieopetclinic/serviceaccounts/ieopetclinic
+  uid: 7ba00dd8-79b5-49df-96aa-c150650340f2
+secrets:
+- name: ieopetclinic-token-bwn96
+- name: ieopetclinic-dockercfg-95vgk

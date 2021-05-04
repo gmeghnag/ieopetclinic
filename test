@@ -1,0 +1,85 @@
+Name:         admin
+Labels:       <none>
+Annotations:  <none>
+Role:
+  Kind:  ClusterRole
+  Name:  admin
+Subjects:
+  Kind  Name     Namespace
+  ----  ----     ---------
+  User  schennu  
+
+
+Name:         admin-0
+Labels:       <none>
+Annotations:  <none>
+Role:
+  Kind:  ClusterRole
+  Name:  admin
+Subjects:
+  Kind  Name              Namespace
+  ----  ----              ---------
+  User  openshift-gitops  
+
+
+Name:         edit
+Labels:       <none>
+Annotations:  <none>
+Role:
+  Kind:  ClusterRole
+  Name:  edit
+Subjects:
+  Kind            Name      Namespace
+  ----            ----      ---------
+  ServiceAccount  pipeline  pt-ieopetclinic
+
+
+Name:         pipeline-anyuid
+Labels:       <none>
+Annotations:  <none>
+Role:
+  Kind:  ClusterRole
+  Name:  pipeline-anyuid
+Subjects:
+  Kind            Name      Namespace
+  ----            ----      ---------
+  ServiceAccount  pipeline  pt-ieopetclinic
+
+
+Name:         system:deployers
+Labels:       <none>
+Annotations:  openshift.io/description:
+                Allows deploymentconfigs in this namespace to rollout pods in this namespace.  It is auto-managed by a controller; remove subjects to disa...
+Role:
+  Kind:  ClusterRole
+  Name:  system:deployer
+Subjects:
+  Kind            Name      Namespace
+  ----            ----      ---------
+  ServiceAccount  deployer  pt-ieopetclinic
+
+
+Name:         system:image-builders
+Labels:       <none>
+Annotations:  openshift.io/description:
+                Allows builds in this namespace to push images to this namespace.  It is auto-managed by a controller; remove subjects to disable.
+Role:
+  Kind:  ClusterRole
+  Name:  system:image-builder
+Subjects:
+  Kind            Name     Namespace
+  ----            ----     ---------
+  ServiceAccount  builder  pt-ieopetclinic
+
+
+Name:         system:image-pullers
+Labels:       <none>
+Annotations:  openshift.io/description:
+                Allows all pods in this namespace to pull images from this namespace.  It is auto-managed by a controller; remove subjects to disable.
+Role:
+  Kind:  ClusterRole
+  Name:  system:image-puller
+Subjects:
+  Kind   Name                                    Namespace
+  ----   ----                                    ---------
+  Group  system:serviceaccounts:pt-ieopetclinic  

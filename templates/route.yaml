@@ -6,7 +6,7 @@ metadata:
   name: ieopetclinic
   namespace: pt-ieopetclinic 
 spec:
-  host: ieopetclinic-pt-ieopetclinic.apps.ocp-t1.itw.uspto.gov
+  host: ieopetclinic-pt-ieopetclinic.apps.cpassare477.lab.pnq2.cee.redhat.com
   port:
     targetPort: 8080
   to:

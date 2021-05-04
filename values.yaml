@@ -5,7 +5,7 @@
 replicaCount: 3 
 
 image:
-  repository: image-registry.openshift-image-registry.svc:5000/pt-ieopetclinic/pt-ieopetclinicapp 
+  repository: arey/springboot-petclinicarey/springboot-petclinic
   pullPolicy: Always 
 
 serviceAccount:

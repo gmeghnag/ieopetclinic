@@ -5,7 +5,7 @@
 replicaCount: 3 
 
 image:
-  repository: arey/springboot-petclinicarey/springboot-petclinic
+  repository: docker.io/arey/springboot-petclinic
   pullPolicy: Always 
 
 serviceAccount:

@@ -6,7 +6,7 @@ metadata:
   name: ieopetclinic
   namespace: pt-ieopetclinic 
 spec:
-  host: ieopetclinic-pt-ieopetclinic.apps.gmeghnag.emeashift.support
+  host: ieopetclini-pt-ieopetclinic.apps.gmeghnag.emeashift.support
   port:
     targetPort: 8080
   to:
